@@ -16,4 +16,4 @@ set.createDialogue({
   ]
 })
 
-console.log('Hello');
+console.log(set);

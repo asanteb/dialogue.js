@@ -1,5 +1,6 @@
 const uuid = require('uuid/v1');
-let { Dialogue, Response } = require('./index');
+const Dialogue = require('./Dialogue');
+const Response = require('./Response');
 
 class DialogueSet {
   constructor({
@@ -18,7 +19,6 @@ class DialogueSet {
 
   createDialogue(opts = {}) {
     const { name, responses = [], _id, text, meta } = opts;
-    console.log(Dialogue);
     const generatedResponses = responses.map(response => {
       const resOpts = typeof response === 'object' ? response : { text: response };
       return new Response(resOpts);

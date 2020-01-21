@@ -20,7 +20,7 @@ class Dialogue {
   }
 
   pickResponse(responseId) {
-    const { _id } = this;
+    const { _id, context } = this;
 
     if (context) {
       const exists = context.history.find(v => v._id === _id);
